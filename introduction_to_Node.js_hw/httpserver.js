@@ -11,7 +11,11 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, {
                 'content-Type': 'text/html; charset=UTF-8',
             });
-            res.end(`<h1>Корневая страница</h1><br></br><p>Просмотров:${countArray[0]}</p><br></br><a href="http://127.0.0.1:3000/about">Ссылка на страницу /about</a>`)
+            res.end(
+                `<h1>Корневая страница</h1>
+                <p>Просмотров:${countArray[0]}</p>
+                <a href="http://127.0.0.1:3000/about">Ссылка на страницу /about</a>`
+            );
             break;
 
         case '/about':
@@ -19,7 +23,11 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, {
                 'content-Type': 'text/html; charset=UTF-8',
             });
-            res.end(`<h1>Cтраница about</h1><br></br><p>Просмотров:${countArray[1]}</p><br></br><a href="http://127.0.0.1:3000/">Ссылка на корневую страницу /</a>`)
+            res.end(
+                `<h1>Cтраница about</h1>
+                <p>Просмотров:${countArray[1]}</p>
+                <a href="http://127.0.0.1:3000/">Ссылка на корневую страницу /</a>`
+            );
             break;
 
         default:
