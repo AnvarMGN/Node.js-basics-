@@ -1,10 +1,16 @@
 
 const express = require('express');
+
 const fs = require('fs');
-const path = require('path');// путь к перезаписываемому файлу счётчика
 
 const app = express();
+const port = 3000;
 
+app.listen(port, () => {
+    console.log(`Сервер запущен на порту ${port}`);
+});
+
+const path = require('path');// путь к перезаписываемому файлу счётчика
 const filePath = path.join(__dirname, 'count.json');
 
 function loadCount() { //функция создания файла счётчика, либо его загрузки при запуске сервера
@@ -43,10 +49,4 @@ app.get('/about', (req, res) => {
         <p>Просмотров:${countFile['/about']}</p>
 		<a href="/">Перейти на главную страницу</a>
         `)
-});
-
-const port = 3000;
-
-app.listen(port, () => {
-    console.log(`Сервер запущен на порту ${port}`);
 });
