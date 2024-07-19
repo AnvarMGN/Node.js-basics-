@@ -20,7 +20,7 @@ function loadCount() { //функция создания файла счётчи
 
 function saveCount(startCount) {// функция сохранения файла счётчика
     fs.writeFileSync(filePath, JSON.stringify(startCount), 'utf-8');
-}
+};
 
 
 let countFile = loadCount();
@@ -49,4 +49,4 @@ const port = 3000;
 
 app.listen(port, () => {
     console.log(`Сервер запущен на порту ${port}`);
-})
+});
