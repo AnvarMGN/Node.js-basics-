@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "firstName": "Ivan",
+        "secondName": "Popov",
+        "age": 20,
+        "city": "Moscow"
+    },
+    {
+        "id": "10f970e4fklyvxv62l",
+        "firstName": "Vladimir",
+        "secondName": "Rogov",
+        "age": 35,
+        "city": "Minsk"
+    },
+    {
+        "id": "10f970e4fklyvy50ag",
+        "firstName": "Sergey",
+        "secondName": "Fyrsov",
+        "age": 22,
+        "city": "Perm"
+    }
+]
